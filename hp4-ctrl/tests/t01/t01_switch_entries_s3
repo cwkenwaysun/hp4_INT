@@ -1,0 +1,4 @@
+table_add dmac forward 1 => 2
+table_add dmac forward 2 => 2
+table_add dmac forward 3 => 1
+table_add dmac broadcast 4 => 5

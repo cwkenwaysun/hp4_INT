@@ -1,0 +1,9 @@
+vdev_create tests/hp4t_l2_switch.p4 switch1
+lease_insert alpha switch1 0 etrue
+vdev_create tests/hp4t_l2_switch.p4 switch2
+lease_insert bravo switch2 0 etrue
+vdev_create tests/hp4t_l2_switch.p4 switch3
+lease_insert charlie switch3 0 etrue
+vdev_interpretf switch1 bmv2 tests/t01/t01_switch_entries_s1
+vdev_interpretf switch2 bmv2 tests/t01/t01_switch_entries_s2
+vdev_interpretf switch3 bmv2 tests/t01/t01_switch_entries_s3
